@@ -5,7 +5,7 @@ import os
 def load_data(filepath: object) -> object:
     """Return the dictionary of jsons data"""
     if not os.path.exists(filepath):
-        return "File not found!"
+        return None
     with open(filepath, encoding='utf8') as file_handler:
         return json.load(file_handler)
 
